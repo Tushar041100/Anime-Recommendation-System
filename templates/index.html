@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <title>Anime Recommender System</title>
+  </head>
+  <style>
+    .text-white {
+      color: white;
+    }
+  </style>
+  <body style="background-color: black;">
+    <nav class="navbar" style="background-color: #00a65a;">
+        <a class="navbar-brand">Anime Recommender</a>
+        <ul class="nav navbar-nav">
+            <li><a href="/">Home</a></li>
+            <li><a href="/recommend">Recommend</a></li>
+            <li><a>Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class = "container">
+        <div class = "row">
+            <div class = "col-12">
+                <h1 class="text-white" style="font-size: 40px;">Top 50 Animes</h1>
+            </div>
+
+            {% for anime in range(Name|length) %}
+                <div class="col-md-3" style="margin-top: 40px;">
+                    <div class="card">
+                        <div class="card-body">
+                            <h3 class="card-title text-white">{{ Name[anime] }}</h3>
+                            <p class="card-text text-white">Rating - {{ Rating[anime] }}</p>
+                            <p class="card-text text-white">Genres - {{ Genres[anime] }}</p>
+                            <p class="card-text text-white">Synopsis - {{ Synopsis[anime] }}</p>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+  </body>
+</html>

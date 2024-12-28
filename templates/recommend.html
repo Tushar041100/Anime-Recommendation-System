@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anime Recommendation System</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+<style>
+    .text-white {
+      color: white;
+    }
+</style>
+<body style="background-color: black;">
+    <nav class="navbar" style="background-color: #00a65a;">
+        <a class="navbar-brand">Anime Recommender</a>
+        <ul class="nav navbar-nav">
+            <li><a href="/">Home</a></li>
+            <li><a href="/recommend">Recommend</a></li>
+            <li><a>Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h1 class="text-white" style="font-size: 40px;">Recommend Animes</h1>
+                <form id="recommendationForm">
+                    <input name="user_input" id="user_input" type="text" class="form-control"><br>
+                    <button type="button" onclick="submitForm('/content_based_recommendation')" class="btn btn-lg btn-warning" style="margin-right: 58px;">Content Based Recommendation</button>
+                    <button type="button" onclick="submitForm('/collaborative_based_recommendation')" class="btn btn-lg btn-warning" style="margin: 0 58px 0 58px;">Collaborative Based Recommendation</button>
+                    <button type="button" onclick="submitForm('/hybrid_based_recommendation')" class="btn btn-lg btn-warning" style="margin-left: 58px;">Hybrid Based Recommendation</button>
+                </form>
+            </div>
+            
+            {% if data %}
+                {% for anime in data %}
+                    <div class="col-md-3" style="margin-top: 40px;">
+                        <div class="card">
+                            <div class="card-body">
+                                <h3 class="card-title text-white">{{ anime[0] }}</h3>
+                                <p class="card-text text-white">{{ anime[1] }}</p>
+                                <p class="card-text text-white">{{ anime[2] }}</p>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            {% endif %}
+            
+        </div>
+    </div>
+
+    <script>
+        async function submitForm(action) {
+            const userInput = document.getElementById('user_input').value;
+            const response = await fetch(action, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ user_input: userInput })
+            });
+
+            if (response.ok) {
+                const data = await response.text();
+                document.open();
+                document.write(data);
+                document.close();
+            } else {
+                console.error('Error:', response.statusText);
+                alert('An error occurred while making the request.');
+            }
+        }
+    </script>
+</body>
+</html>
