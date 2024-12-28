@@ -14,12 +14,13 @@ This project is an Anime Recommendation System that provides recommendations bas
 - [Usage](#usage)
 - [Contributing](#contributing)
 - [License](#license)
+- [Reference Images](#reference-images)
 
 ## Installation
 
 1. Clone the repository:
     ```sh
-    git clone https://github.com/yourusername/Anime-Recommendation-System.git
+    git clone https://github.com/Tushar041100/Anime-Recommendation-System.git
     cd Anime-Recommendation-System
     ```
 
@@ -40,13 +41,37 @@ The dataset used in this project can be found on [Kaggle](https://www.kaggle.com
 
 ## Project Structure
 
-Anime-Recommendation-System/ ├── Dataset/ │ ├── anime.csv │ ├── anime_with_synopsis.csv │ ├── animelist.csv │ ├── rating_complete.csv │ └── watching_status.csv ├── model/ │ ├── animes.pkl │ ├── cosine_sim.pkl │ ├── linear_sim.pkl │ ├── pivot_table.pkl │ └── popular_anime.pkl ├── templates/ │ ├── index.html │ └── recommend.html ├── .vscode/ │ └── launch.json ├── pycache/ ├── nenv/ ├── anime-recommender-system.ipynb ├── popularity-based-anime-recommender-system.ipynb ├── app.py ├── README.md ├── requirements.txt └── debug.log
+Anime-Recommendation-System/ 
+├── Dataset/ │ 
+|    ├── anime.csv │ 
+|    ├── anime_with_synopsis.csv │ 
+|    ├── animelist.csv │ 
+|    ├── rating_complete.csv │ 
+|    └── watching_status.csv 
+├── model/ │ 
+|   ├── animes.pkl │ 
+|   ├── cosine_sim.pkl │ 
+|   ├── linear_sim.pkl │ 
+|   ├── pivot_table.pkl │ 
+|   └── popular_anime.pkl 
+├── templates/ │ 
+|   ├── index.html │ 
+|   └── recommend.html
+├── Notebooks
+|   ├── anime-recommender-system.ipynb 
+|   ├── popularity-based-anime-recommender-system.ipynb 
+|   └── generated.ipynb
+├── app.py 
+├── README.md 
+└── requirements.txt 
+
+Note: The model and Dataset folders were not checked in. You can generate the models from the code present in the notebooks and get the dataset from the link provided above.
 
 ## Data Preprocessing
 
 1. Load the datasets using pandas.
 2. Merge and clean the datasets to create a unified dataframe.
-3. Scale the features using `MinMaxScaler`.
+3. Scale the features.
 4. Save the preprocessed data to `anime_features_scaled.csv`.
 
 ## Recommendation Systems
@@ -86,3 +111,9 @@ Contributions are welcome! Please open an issue or submit a pull request for any
 ## License
 
 This project is licensed under the MIT License.
+
+## Reference Images
+
+Here are some reference images used in this project:
+![Home Page](images/HomePage.png)
+![Recommendation Page](images/RecommendationPage.png)
