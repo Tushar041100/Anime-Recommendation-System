@@ -41,32 +41,32 @@ The dataset used in this project can be found on [Kaggle](https://www.kaggle.com
 
 ## Project Structure
 
-Anime-Recommendation-System/
+Anime-Recommendation-System
+├── app.py
 ├── Dataset/
 │   ├── anime.csv
-│   ├── anime_with_synopsis.csv
 │   ├── animelist.csv
+│   ├── anime_with_synopsis.csv
 │   ├── rating_complete.csv
 │   └── watching_status.csv
-├── images/
-│   ├── homepage.png
-│   └── recommendationpage.png
+├── Images/
+│   ├── HomePage.png
+│   └── RecommendationPage.png
 ├── model/
 │   ├── animes.pkl
 │   ├── cosine_sim.pkl
 │   ├── linear_sim.pkl
 │   ├── pivot_table.pkl
 │   └── popular_anime.pkl
-├── templates/
-│   ├── index.html
-│   └── recommend.html
 ├── Notebooks/
 │   ├── anime-recommender-system.ipynb
-│   ├── popularity-based-anime-recommender-system.ipynb
-│   └── generated.ipynb
-├── app.py
+│   ├── generated.ipynb
+│   └── popularity-based-anime-recommender-system.ipynb
 ├── README.md
-└── requirements.txt
+├── requirements.txt
+└── templates/
+    ├── index.html
+    └── recommend.html
 
 Note: The model and Dataset folders were not checked in. You can generate the models from the code present in the notebooks and get the dataset from the link provided above.
 
@@ -118,5 +118,5 @@ This project is licensed under the MIT License.
 ## Reference Images
 
 Here are some reference images used in this project:
-![Home Page](images/homepage.png)
-![Recommendation Page](images/recommendationpage.png)
+![Home Page](Images/HomePage.png)
+![Recommendation Page](Images/RecommendationPage.png)
