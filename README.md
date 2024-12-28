@@ -41,29 +41,32 @@ The dataset used in this project can be found on [Kaggle](https://www.kaggle.com
 
 ## Project Structure
 
-Anime-Recommendation-System/ 
-├── Dataset/ │ 
-|    ├── anime.csv │ 
-|    ├── anime_with_synopsis.csv │ 
-|    ├── animelist.csv │ 
-|    ├── rating_complete.csv │ 
-|    └── watching_status.csv 
-├── model/ │ 
-|   ├── animes.pkl │ 
-|   ├── cosine_sim.pkl │ 
-|   ├── linear_sim.pkl │ 
-|   ├── pivot_table.pkl │ 
-|   └── popular_anime.pkl 
-├── templates/ │ 
-|   ├── index.html │ 
-|   └── recommend.html
-├── Notebooks
-|   ├── anime-recommender-system.ipynb 
-|   ├── popularity-based-anime-recommender-system.ipynb 
-|   └── generated.ipynb
-├── app.py 
-├── README.md 
-└── requirements.txt 
+Anime-Recommendation-System/
+├── Dataset/
+│   ├── anime.csv
+│   ├── anime_with_synopsis.csv
+│   ├── animelist.csv
+│   ├── rating_complete.csv
+│   └── watching_status.csv
+├── images/
+│   ├── homepage.png
+│   └── recommendationpage.png
+├── model/
+│   ├── animes.pkl
+│   ├── cosine_sim.pkl
+│   ├── linear_sim.pkl
+│   ├── pivot_table.pkl
+│   └── popular_anime.pkl
+├── templates/
+│   ├── index.html
+│   └── recommend.html
+├── Notebooks/
+│   ├── anime-recommender-system.ipynb
+│   ├── popularity-based-anime-recommender-system.ipynb
+│   └── generated.ipynb
+├── app.py
+├── README.md
+└── requirements.txt
 
 Note: The model and Dataset folders were not checked in. You can generate the models from the code present in the notebooks and get the dataset from the link provided above.
 
@@ -115,5 +118,5 @@ This project is licensed under the MIT License.
 ## Reference Images
 
 Here are some reference images used in this project:
-![Home Page](images/HomePage.png)
-![Recommendation Page](images/RecommendationPage.png)
+![Home Page](images/homepage.png)
+![Recommendation Page](images/recommendationpage.png)
